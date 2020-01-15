@@ -1,4 +1,3 @@
-
 #include <iostream> 
 #include <list> 
 using namespace std; 
@@ -14,20 +13,20 @@ public:
     ~Graph()       { delete [] adj; } 
   
     // function to add an edge to graph 
-    void addEdge(int v, int w); 
+    void ADDedge(int v, int w); 
   
     // Prints coloring
-    void greedyColoring(); 
+    void COLORING(); 
 }; 
   
-void Graph::addEdge(int v, int w) 
+void Graph::ADDedge(int v, int w) 
 { 
     adj[v].push_back(w); 
     adj[w].push_back(v); 
 } 
   
  
-void Graph::greedyColoring() 
+void Graph::COLORING() 
 { 
     int result[V]; 
   
@@ -78,14 +77,14 @@ int main()
  
   
     Graph exampleGraph1(5); 
-    exampleGraph1.addEdge(0, 1); 
-    exampleGraph1.addEdge(0, 2); 
-    exampleGraph1.addEdge(1, 2); 
-    exampleGraph1.addEdge(1, 3); 
-    exampleGraph1.addEdge(3, 4); 
-    exampleGraph1.addEdge(4, 2); 
+    exampleGraph1.ADDedge(0, 1); 
+    exampleGraph1.ADDedge(0, 2); 
+    exampleGraph1.ADDedge(1, 2); 
+    exampleGraph1.ADDedge(1, 3); 
+    exampleGraph1.ADDedge(3, 4); 
+    exampleGraph1.ADDedge(4, 2); 
     cout << "\nColoring of the graph  \n"; 
-    exampleGraph1.greedyColoring(); 
+    exampleGraph1.COLORING(); 
   
     return 0; 
 } 
